@@ -1,0 +1,137 @@
+body{
+	background: url("/static/img/1.jpg");background-repeat: no-repeat;
+	padding: 20px;
+}
+
+#menu{
+background-color: #28b19d;
+}
+
+#menu ul{
+	list-style: none;
+	margin:0;
+	padding: 0;
+}
+
+#menu ul li{
+	display: inline-block;
+}
+
+#menu ul li a{
+	text-decoration: none;
+	display: block;
+	padding: 20px;
+	color: white;
+}
+
+#menu ul li a:hover{
+	background-color: #42b881;
+}
+
+.item-salir {
+	float: right;
+}
+
+.welcome {
+	color: #28b19d;
+}
+
+.finalizar {
+	margin-top: 42px;
+	height:120px;
+	left:0px;
+	bottom:0px;
+	background:#28b19d;
+	text-align: right;
+	padding: 10px;
+}
+
+.finalizar p {
+	color: white;
+}
+
+#map{
+	height: 800px;
+	width: 800px;
+	max-width: 100%;
+}
+
+.video1 {
+	padding: 20px;
+}
+.video2 {
+	padding: 20px;
+}
+
+.rec {
+	color: white;
+	font-size: 33px;
+}
+
+.formulario {
+	border: solid 10px;
+	width: 800px;
+	max-width: 100%;
+	margin-top: 50px;
+}
+
+#id_username {
+	width: 100%;
+	height: 35px;
+	font-size: 30px;
+	text-align: center;
+}
+
+#id_nombre {
+	width: 100%;
+	height: 35px;
+	font-size: 30px;
+	text-align: center;
+}
+
+#id_apellido {
+	width: 100%;
+	height: 35px;
+	font-size: 30px;
+	text-align: center;
+}
+
+#id_fecha {
+	width: 100%;
+	height: 35px;
+	font-size: 30px;
+	text-align: center;
+}
+
+#id_informacion {
+	width: 100%;
+	height: 140px;
+	font-size: 30px;
+}
+
+#boton {
+	text-decoration: none;
+	display: block;
+	border: 1px solid gray;
+	width: 200px;
+	height: 40px;
+	text-align: center;
+	padding-top: 5px;
+	background-color: #28b19d;
+	color: #ffff;
+	transition: 2s;
+	box-shadow: -3px 3px 10px #000;
+	text-shadow: -3px 3px 10px #000;
+	font-size: 20px;
+	margin-top: 10px;
+}
+
+#boton:hover{
+	background-color: #ffff;
+	color: #28b19d;
+}
+
+.objetos {
+	border-radius: 30px;
+	max-width: 100%;
+}

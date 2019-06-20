@@ -1,0 +1,46 @@
+.bodyregistro {
+	padding: 20px;
+	background-image: url("/static/img/registro.jpg");background-repeat: no-repeat;
+}
+
+.titulo {
+	margin-top: 30px;
+	display: inline-block;
+	position: relative;	
+	max-width: 100%;
+}
+.titulo::after,.titulo::before{
+	content: '';
+	position: absolute;
+	width: 120px;
+	height: 3px;
+	background-color: black;
+	top: 0.6em;
+}
+.titulo::before {
+	left: -140px;
+}
+.titulo::after {
+	right: -140px;
+}
+
+#boton {
+	width: 500px;
+	max-width: 80%;
+	margin-top: 20px;
+	background-color: #28b19d;
+}
+
+#finalizar {
+	margin-top: 20px;
+	height:120px;
+	left:0px;
+	bottom:0px;
+	background:#28b19d;
+	text-align: right;
+	padding: 10px;
+}
+
+.footer {
+	color: white;
+}

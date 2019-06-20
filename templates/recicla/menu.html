@@ -1,0 +1,125 @@
+{% extends 'base/base_logeado.html' %}
+
+    {% block title %}
+		<title>Menu principal</title>
+    {% endblock%}
+
+{% block content %}
+
+<h1 class="welcome">Bienvenido/a {{ user.username }}</h1>
+
+<center>
+	<div id="map"></div>	
+</center>
+
+
+
+<script>
+
+function initMap(){
+
+		var options = {
+			zoom:13,
+			center:{lat:-33.4443848, lng:-70.8205314}
+		}
+
+		var map = new google.maps.Map(document.getElementById('map'), options);
+
+		var icon = {
+			url: "https://cdn.pixabay.com/photo/2013/07/13/11/47/bin-158679_640.png",
+			scaledSize: new google.maps.Size(30, 30),origin: new google.maps.Point(0,0),anchor: new google.maps.Point(0, 0)
+		};
+
+
+		addMarker({
+			coords:{lat:-33.4399043,lng:-70.8121813},
+			iconImage:icon,
+			content:'Punto de reciclaje N°4 <a class="btn" href="{% url 'recicladores:punto4' %}"> ACA </a>'
+		});
+
+		addMarker({
+			coords:{lat:-33.455362,lng:-70.854840},
+			iconImage:icon,
+			content:'Punto de reciclaje N°1 <a class="btn" href="{% url 'recicladores:punto1' %}"> ACA </a>'
+		});
+		
+		addMarker({
+			coords:{lat:-33.457226,lng:-70.844810},
+			iconImage:icon,
+			content:'Punto de reciclaje N°2 <a class="btn" href="{% url 'recicladores:punto2' %}"> ACA </a>'
+		});
+
+		addMarker({
+			coords:{lat:-33.449592,lng:-70.763009},
+			iconImage:icon,
+			content:'Punto de reciclaje N°7 <a class="btn" href="{% url 'recicladores:punto7' %}"> ACA </a>'
+		});
+
+		addMarker({
+			coords:{lat:-33.4367119,lng:-70.774557},
+			iconImage:icon,
+			content:'Punto de reciclaje N°6 <a class="btn" href="{% url 'recicladores:punto6' %}"> ACA </a>'
+		});
+
+		addMarker({
+			coords:{lat:-33.461522,lng:-70.762505},
+			iconImage:icon,
+			content:'Punto de reciclaje N°8 <a class="btn" href="{% url 'recicladores:punto8' %}"> ACA </a>'
+		});
+		addMarker({
+			coords:{lat:-33.451503,lng:-70.849650},
+			iconImage:icon,
+			content:'Punto de reciclaje N°3 <a class="btn" href="{% url 'recicladores:punto3' %}"> ACA </a>'
+		});
+
+		addMarker({
+			coords:{lat:-33.428355,lng:-70.777451},
+			iconImage:icon,
+			content:'Punto de reciclaje N°5 <a class="btn" href="{% url 'recicladores:punto5' %}"> ACA </a>'
+		});
+
+		function addMarker(props){
+			var Marker = new google.maps.Marker({
+				position:props.coords,
+				map: map,
+			});
+
+			if(props.iconImage){Marker.setIcon(props.iconImage);}
+
+			if(props.content){
+				var infoWindow = new google.maps.InfoWindow({content: props.content});
+				Marker.addListener('click',function(){infoWindow.open(map,Marker);});
+			}
+		}
+
+		var infoWindow2 = new google.maps.InfoWindow();
+
+		if (navigator.geolocation) {
+         	navigator.geolocation.getCurrentPosition(function(position) {
+            	var pos = {
+              	lat: position.coords.latitude,
+              	lng: position.coords.longitude
+            };
+
+            	infoWindow2.setPosition(pos);
+            	infoWindow2.setContent('Aca estas');
+           	 	infoWindow2.open(map);
+            	map.setCenter(pos);
+
+          	}, 
+          	function() {
+            	handleLocationError(true, infoWindow2, map.getCenter());});
+        } 
+        else {
+        		handleLocationError(false, infoWindow2, map.getCenter());
+        }
+
+}
+
+</script>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB17ATxwwZT4udkPa1Q18R6zK2G2Bz0oyw&callback=initMap"></script>
+
+{% endblock %}
+
+

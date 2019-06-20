@@ -1,0 +1,65 @@
+{% load staticfiles %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+
+    {% block extrastatic %}
+    {% endblock %}
+
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+
+    <title>Index</title>
+</head>
+
+<body class="bodyindex">
+
+<div class="menu">
+
+    <br>
+
+    <ul>
+        <li><a href="{% url 'index:registrarse' %}">REGISTRARSE</a></li>
+        <li><a href="{% url 'login' %}">INICIAR SESION</a></li>
+    </ul>
+
+</div>
+  
+{% block content %}
+
+<div class="contenido">
+
+    <center>
+        <img src="/static/img/captura.png" class="captura"/>
+    </center>
+    <center>
+        <img class="logo" src="/static/img/natural.png" />   
+    </center>
+    <br>
+    <br>
+    <center>
+        <a class="informacion" href="{% url 'index:informacion' %}">INFORMACION DE LA APP</a>       
+    </center>
+
+</div>
+
+
+{% endblock %}
+
+{% block footer %}
+
+<div class="finalizar">
+
+    <p style="color: white;">Proyecto Desarrollado por: Jean Cid <br> Jorge Gaete <br> Ramiro Reyes <br> Diego Toloza <br> Escuela: Duoc UC Maipu</p>
+    
+</div>
+
+{% endblock %}
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+{% load staticfiles %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+
+    {% block extrastatic %}
+    {% endblock %}
+
+<link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+
+<script>
+
+    function mostraryocultar(id) {
+        if (document.getElementById(id).style.display == 'block'){
+            document.getElementById(id).style.display = 'none';
+        }else {document.getElementById(id).style.display = 'block'; }
+    }
+
+</script>
+
+<title>Recicla!</title>
+
+</head>
+
+<body class="bodyinformacion">
+
+<center>
+    <p>
+    <a href="{% url 'index:Menu' %}">
+    <img class="logoinfo" src="/static/img/captura.png" alt="#" />
+    </a>
+    </p>
+
+
+    <input type="button" value="¿Que es &ldquo;Recicla!&rdquo; ?" onclick="mostraryocultar('mostrar1')" class="botones">
+
+    <div id="mostrar1" class="hidden">
+        <h1>Recicla!</h1>
+        <p>"Recicla!" es una página web que se implementará a modo de proyecto. Esta página web buscará fomentar y aumentar los actos de reciclaje en la comuna por parte de vecinos y de los colegios de esta.<br>
+        En la comuna estarán ubicados puntos de reciclajes que se mostrarán en la página web y así los usuarios podrán ver cuál es el punto de reciclaje más cercano a ellos.
+        </p>
+    </div>
+
+    <br>
+    <br>
+
+    <input type="button" value="Disponibilidad" onclick="mostraryocultar('mostrar2')" class="botones">
+
+    <div id="mostrar2" class="hidden">
+        <h1>¿Donde estara disponible?</h1>
+        <p>Nuestro proyecto dará cobertura a las necesidades de la comuna Pudahuel solamente. <br>
+           En dicha comuna realizamos este proyecto en base al pladeco de la municipalidad.
+        </p>
+    </div>
+
+    <br>
+    <br>
+
+    <input type="button" value="Efectos y Justificacion" onclick="mostraryocultar('mostrar3')" class="botones">
+
+    <div id="mostrar3" class="hidden">
+        <h1>¿Que efectos tiene el cuidado del medio ambiente?</h1>
+        <p>el proyecto llamado está destinado a crear conciencia sobre el medio ambiente ya que de este obtenemos recursos que se están agotando y poniendo en peligro.La motivación de llevar a cabo este proyecto, es que en Chile se generan casi 17 millones de toneladas de residuos solidos al año y lamentablemente solo un 10% de esta es reciclada, nuestra motivación cabe en instalar puntos limpios y lograr que los estudiantes de la comuna generen el cambio de hábitos que como sociedad tenemos.
+
+        </p>
+    </div>
+    <br>
+    <br>
+        
+</center>
+
+
+
+</body>
+</html>

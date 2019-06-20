@@ -1,0 +1,65 @@
+.bodylogin {
+	padding: 20px;
+	background-image: url("/static/img/login.jpg");background-repeat: no-repeat;
+}
+
+.simbolo {
+	margin-top: 20px;
+	width: 300px;
+	height: 300px;
+}
+
+.divlogin {
+	margin-top: 50px;
+}
+
+h1 {
+	color: white;
+	font-size: 40px;
+}
+
+label {
+	color: white;
+	font-size: 20px;
+}
+
+#contra {
+	margin-top: 10px;
+}
+
+#botones {
+	margin-top: 10px;
+}
+
+#botonreg {
+	width: 200px;
+	height: 50px;
+	font-size: 25px;
+	background-color: #28b19d;
+}
+#botonlog {
+	margin-left: 10px;
+	width: 200px;
+	height: 50px;
+	font-size: 25px;
+	background-color: #28b19d;
+}
+#botonface {
+	width: 200px;
+	height: 50px;
+	font-size: 25px;
+	background-color: #28b19d;
+}
+
+.finalizar {
+	margin-top: 60px;
+	height:120px;
+	left:0px;
+	bottom:0px;
+	background:#28b19d;
+	text-align: right;
+	padding: 10px;
+}
+.finalizar p {
+	color: white;
+}

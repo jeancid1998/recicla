@@ -1,0 +1,62 @@
+{% load staticfiles %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+
+    {% block extrastatic %}
+    {% endblock %}
+
+    <link rel="stylesheet" href="{% static 'css/estilos_logeado.css' %}">
+
+
+    {% block title %}
+
+    {% endblock%}
+
+</head>
+
+<body class="bodyuser">
+
+<div id="menu">
+    <ul>
+        <li><a href="{% url 'recicladores:Menu' %}">INICIO</a></li>
+        <li><a href="{% url 'recicladores:Videos' %}">VIDEOS</a></li>
+        <li><a href="{% url 'chat:index' %}">CHAT</a></li>
+        <li class="item-salir"><a href="{% url 'login' %}">SALIR</a></li>
+    </ul>
+    
+</div>
+
+
+
+
+{% block content %}
+
+
+
+
+{% endblock %}
+
+
+
+{% block footer %}
+
+<div class="finalizar">
+
+            <p>Proyecto Desarrollado por: Jean Cid <br> Jorge Gaete <br> Ramiro Reyes <br> Diego Toloza <br> Escuela: Duoc UC Maipu</p>
+    <br>
+    <br>
+    <br>
+
+</div>
+
+{% endblock %}
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+
+</body>
+</html>
